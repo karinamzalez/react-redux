@@ -7,6 +7,13 @@ export const addIdea = (ideaObject) => {
   };
 };
 
+export const removeIdea = (ideaObject) => {
+  return {
+    type: 'REMOVE_IDEA',
+    ideaObject: ideaObject
+  };
+};
+
 export const updateTitleInput = (titleString) => {
   return {
     type: 'TITLE_INPUT',
