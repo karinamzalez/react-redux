@@ -8,6 +8,10 @@ const ideas = (state = [], action) => {
           ...state,
           action.ideaObject
         ];
+    case 'REMOVE_IDEA':
+      return state.filter(
+        idea => idea.id !== action.id
+      );
     default:
       return state;
   }
@@ -19,6 +23,7 @@ const inputs = (state = {}, action) => {
       return Object.assign({}, state, {
         titleString: action.titleString
       });
+
     case 'BODY_INPUT':
       return Object.assign({}, state, {
         bodyString: action.bodyString

@@ -7,10 +7,10 @@ export const addIdea = (ideaObject) => {
   };
 };
 
-export const removeIdea = (ideaObject) => {
+export const removeIdea = (id) => {
   return {
     type: 'REMOVE_IDEA',
-    ideaObject: ideaObject
+    id: id
   };
 };
 
