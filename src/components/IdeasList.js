@@ -11,7 +11,7 @@ const IdeasList = (props) => {
       {
         props.ideas.length ?
         props.ideas.map((idea) => {
-          return <IdeaItem idea={idea} />
+          return <IdeaItem idea={idea} key={idea.id} />
         })
         : "blerp"
       }

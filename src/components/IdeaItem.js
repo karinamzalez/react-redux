@@ -16,6 +16,12 @@ const IdeaItem = (props) => {
   );
 };
 
+const mapStateToProps = state => {
+  return {
+    ideas: state.ideas
+  }
+}
+
 const mapDispatchToProps = dispatch => {
   return {
     removeIdea: (id, e) => {
@@ -26,5 +32,6 @@ const mapDispatchToProps = dispatch => {
 }
 
 export default connect(
+  mapStateToProps,
   mapDispatchToProps
 )(IdeaItem);
