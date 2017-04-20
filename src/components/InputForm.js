@@ -31,7 +31,6 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
   return {
     updateTitleInput: (titleString) => {
-      console.log('fired');
       dispatch(updateTitleInput(titleString))
     },
     updateBodyInput: (bodyString) => {

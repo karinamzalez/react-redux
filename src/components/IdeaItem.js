@@ -11,18 +11,17 @@ const IdeaItem = (props) => {
       <h1>{props.idea.title}</h1>
       <p>{props.idea.body}</p>
       <p>{props.idea.quality}</p>
-      <button className="delete-btn" onClick={(e) => props.removeIdea(props.idea.id, e)}>Remove Idea</button>
+      <button className="delete-btn" type="submit" onClick={(e) => props.removeIdea(props.idea.id, e)}>Remove Idea</button>
     </li>
   );
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    addIdea: (id, e) => {
+    removeIdea: (id, e) => {
       e.preventDefault()
-      const id = id
+      dispatch(removeIdea(id))
     }
-    dispatch(removeIdea(id))
   }
 }
 
